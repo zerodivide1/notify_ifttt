@@ -1,0 +1,28 @@
+#!/bin/bash
+# Bash command line script to push to a IFTTT's Maker channel
+
+die() {
+  echo $1 >&2
+  exit 1
+}
+
+printUsage() {
+  echo "Usage: notify_ifttt <event name> <value1> <value2> <value3>"
+}
+
+if [[ -z "$CONFIG" ]]; then
+  CONFIG=$HOME/.config/notify_ifttt
+fi
+
+if [[ ! -e $CONFIG ]]; then
+  die "Configuration file $CONFIG not found"
+fi
+
+source $CONFIG
+
+if [[ -z "$IFTTT_MAKER_KEY" ]]; then
+  die "Variable IFTTT_MAKER_KEY not configured in $CONFIG"
+fi
+
+IFTTT_MAKER_EVENT=${DEFAULT_MAKER_EVENT:-$1}
+shift
