@@ -39,4 +39,6 @@ done
 IFTTT_MAKER_URL="https://maker.ifttt.com/trigger/$IFTTT_MAKER_EVENT/with/key/$IFTTT_MAKER_KEY"
 if [[ ! -z "$POSTVALS" ]]; then
   curl -X POST -H "Content-Type: application/json" -d "$POSTVALS" $IFTTT_MAKER_URL
+else
+  curl -X POST -H "Content-Type: application/json" $IFTTT_MAKER_URL
 fi
