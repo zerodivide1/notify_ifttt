@@ -26,3 +26,13 @@ fi
 
 IFTTT_MAKER_EVENT=${DEFAULT_MAKER_EVENT:-$1}
 shift
+
+for (( i = 1; i <= 3; i++ )); do
+  if [[ ! -z "$1" ]]; then
+    POSTVALS=$(echo ${POSTVALS:-'{}'} | jq ". + {\"value$i\": \"$1\"}")
+    shift
+  else
+    break
+  fi
+done
+
