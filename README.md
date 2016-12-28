@@ -5,3 +5,9 @@ Simple script to post simple values to IFTTT's Maker channel. Useful for calling
 * curl
 * [jq](https://stedolan.github.io/jq/)
 
+## Configuration
+1. Create a file at `.config/notify_ifttt`
+2. Add a configuration variable `IFTTT_MAKER_KEY` with the value of the IFTTT Maker channel key. For example:
+  ```
+  IFTTT_MAKER_KEY=abcdef0123456789...
+  ```
