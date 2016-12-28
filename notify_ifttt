@@ -36,3 +36,4 @@ for (( i = 1; i <= 3; i++ )); do
   fi
 done
 
+IFTTT_MAKER_URL="https://maker.ifttt.com/trigger/$IFTTT_MAKER_EVENT/with/key/$IFTTT_MAKER_KEY"
