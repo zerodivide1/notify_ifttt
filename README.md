@@ -11,3 +11,9 @@ Simple script to post simple values to IFTTT's Maker channel. Useful for calling
   ```
   IFTTT_MAKER_KEY=abcdef0123456789...
   ```
+
+## Installation
+1. Clone the repository: `git clone https://github.com/zerodivide1/notify_ifttt.git`
+2. Copy the script to a location on your path, e.g. `/usr/local/bin`
+3. Ensure the script is executable: `chmod +x /usr/local/bin/notify_ifttt`
+4. Configure as described in the "Configuration" section.
